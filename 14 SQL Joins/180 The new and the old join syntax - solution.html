@@ -1,0 +1,134 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>180 The new and the old join syntax - solution</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p><strong>SELECT</strong></p>
+
+<p><strong>    e.emp_no,
+
+  </strong></p>
+
+
+
+<p><strong>    e.first_name,
+
+  </strong></p>
+
+
+
+<p><strong>    e.last_name,
+
+  </strong></p>
+
+
+
+<p><strong>    dm.dept_no,
+
+  </strong></p>
+
+
+
+<p><strong>    e.hire_date</strong></p>
+
+
+
+<p><strong>FROM
+
+  </strong></p>
+
+
+
+<p><strong>    employees e,
+
+  </strong></p>
+
+
+
+<p><strong>    dept_manager dm
+
+  </strong></p>
+
+
+
+<p><strong>WHERE
+
+  </strong></p>
+
+
+
+<p><strong>    e.emp_no = dm.emp_no;
+
+  </strong></p>
+
+
+
+<p><br></p><p><em>New Join Syntax:</em>
+
+  </p>
+
+
+
+<p><strong>SELECT</strong> 
+
+  </p>
+
+
+
+<p><strong>    e.emp_no,
+
+  </strong></p>
+
+
+
+<p><strong>    e.first_name,
+
+  </strong></p>
+
+
+
+<p><strong>    e.last_name,
+
+  </strong></p>
+
+
+
+<p><strong>    dm.dept_no,
+
+  </strong></p>
+
+
+
+<p><strong>    e.hire_date</strong></p>
+
+
+
+<p><strong>FROM
+
+  </strong></p>
+
+
+
+<p><strong>    employees e
+
+  </strong></p>
+
+
+
+<p><strong>        JOIN
+
+  </strong></p>
+
+
+
+<p><strong>    dept_manager dm ON e.emp_no = dm.emp_no; </strong></p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

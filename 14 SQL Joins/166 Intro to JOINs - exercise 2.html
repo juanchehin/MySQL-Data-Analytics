@@ -1,0 +1,144 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>166 Intro to JOINs - exercise 2</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p>Create and fill in the ‘dept_manager_dup’ table, using the following code:</p>
+
+<p><br></p>
+
+
+
+<p><strong>DROP TABLE IF EXISTS dept_manager_dup;</strong><br></p>
+
+
+
+<p><strong>CREATE TABLE dept_manager_dup (</strong></p>
+
+
+
+
+
+<p><strong>  emp_no int(11) NOT NULL,</strong></p>
+
+
+
+
+
+<p><strong>  dept_no char(4) NULL,</strong></p>
+
+
+
+
+
+<p><strong>  from_date date NOT NULL,</strong></p>
+
+
+
+
+
+<p><strong>  to_date date NULL</strong></p>
+
+
+
+
+
+<p><strong>  );</strong></p>
+
+
+
+
+
+<p><strong> </strong></p>
+
+
+
+
+
+<p><strong>INSERT INTO dept_manager_dup</strong></p>
+
+
+
+
+
+<p><strong>select * from dept_manager;</strong></p>
+
+
+
+
+
+<p><strong> </strong></p>
+
+
+
+
+
+<p><strong>INSERT INTO dept_manager_dup (emp_no, from_date)</strong></p>
+
+
+
+
+
+<p><strong>VALUES                (999904, '2017-01-01'),</strong></p>
+
+
+
+
+
+<p><strong>                                (999905, '2017-01-01'),</strong></p>
+
+
+
+
+
+<p><strong>                               (999906, '2017-01-01'),</strong></p>
+
+
+
+
+
+<p><strong>                               (999907, '2017-01-01');</strong></p>
+
+
+
+
+
+<p><strong> </strong></p>
+
+
+
+
+
+<p><strong>DELETE FROM dept_manager_dup</strong></p>
+
+
+
+
+
+<p><strong>WHERE</strong></p>
+
+
+
+
+
+<p><strong>    dept_no = 'd001';</strong></p><p><strong>INSERT INTO departments_dup (dept_name)</strong></p>
+
+<p><strong>VALUES                ('Public Relations');</strong></p>
+
+<p><strong> </strong></p>
+
+<p><strong>DELETE FROM departments_dup</strong></p>
+
+<p><strong>WHERE</strong></p>
+
+<p><strong>    dept_no = 'd002'; </strong></p><p><br></p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

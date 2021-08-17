@@ -1,0 +1,66 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>219 Stored procedures - Example - Part II - solution</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p><strong>DELIMITER $$</strong></p>
+
+<p><strong>CREATE PROCEDURE avg_salary()
+
+  </strong></p>
+
+<p><strong>BEGIN
+
+  </strong></p>
+
+<p><strong>                SELECT 
+
+  </strong></p>
+
+<p><strong>                                AVG(salary)
+
+  </strong></p>
+
+<p><strong>                FROM
+
+  </strong></p>
+
+<p><strong>                                salaries;
+
+  </strong></p>
+
+<p><strong>END$$
+
+  </strong></p>
+
+<p><strong>DELIMITER ;
+
+  </strong></p>
+
+
+
+<p><strong>CALL avg_salary;
+
+  </strong></p>
+
+<p><strong>CALL avg_salary();
+
+  </strong></p>
+
+<p><strong>CALL employees.avg_salary;
+
+  </strong></p>
+
+<p><strong>CALL employees.avg_salary();</strong>
+
+</p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

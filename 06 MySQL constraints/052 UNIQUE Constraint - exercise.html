@@ -1,0 +1,158 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>052 UNIQUE Constraint - exercise</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p>Drop the “customers” table, and then recreate it using the following code.</p>
+
+<p><strong>CREATE TABLE customers (
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>    customer_id INT AUTO_INCREMENT,
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>    first_name VARCHAR(255),
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>    last_name VARCHAR(255),
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>    email_address VARCHAR(255),
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>    number_of_complaints INT,
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>PRIMARY KEY (customer_id)
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>);</strong>
+
+  </p>
+
+
+
+
+
+
+
+<p>Then run the following code that will add a “gender” column in the “customers” table, and will then insert a new record in it. Don’t worry if you don’t understand the meaning of the code perfectly – we will discuss these structures later on in the course in more detail. We will just use them now to insert a row in our “customers” table.
+
+  </p>
+
+
+
+
+
+
+
+<p><em> </em><strong>ALTER TABLE customers</strong></p>
+
+
+
+
+
+
+
+<p><strong>ADD COLUMN gender ENUM('M', 'F') AFTER last_name;
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong> 
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>INSERT INTO customers (first_name, last_name, gender, email_address, number_of_complaints) 
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>VALUES ('John', 'Mackinley', 'M', 'john.mckinley@365careers.com', 0)
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>;</strong>
+
+</p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

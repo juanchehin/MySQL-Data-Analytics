@@ -1,0 +1,144 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>238 MySQL Triggers - solution</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p><strong>DELIMITER $$</strong></p>
+
+
+
+<p><strong>CREATE TRIGGER trig_hire_date
+
+  </strong></p>
+
+
+
+
+
+<p><strong>BEFORE INSERT ON employees</strong></p>
+
+
+
+
+
+<p><strong>FOR EACH ROW
+
+  </strong></p>
+
+
+
+
+
+<p><strong>BEGIN 
+
+  </strong></p>
+
+
+
+
+
+<p><strong>                IF NEW.hire_date &gt; date_format(sysdate(), '%Y-%m-%d') THEN 
+
+  </strong></p>
+
+
+
+
+
+<p><strong>                                SET NEW.hire_date = date_format(sysdate(), '%Y-%m-%d'); 
+
+  </strong></p>
+
+
+
+
+
+<p><strong>                END IF; 
+
+  </strong></p>
+
+
+
+
+
+<p><strong>END $$
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>DELIMITER ;
+
+  </strong></p>
+
+
+
+
+
+<p><strong> 
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>INSERT employees VALUES ('999904', '1970-01-31', 'John', 'Johnson', 'M', '2025-01-01');
+
+  </strong></p>
+
+
+
+
+
+
+
+<p><strong>SELECT 
+
+  </strong></p>
+
+
+
+
+
+<p><strong>    *
+
+  </strong></p>
+
+
+
+
+
+<p><strong>FROM
+
+  </strong></p>
+
+
+
+
+
+<p><strong>    employees</strong></p>
+
+
+
+
+
+<p><strong>ORDER BY emp_no DESC;</strong>
+
+</p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

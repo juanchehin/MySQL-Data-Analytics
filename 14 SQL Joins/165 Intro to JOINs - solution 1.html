@@ -1,0 +1,218 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>165 Intro to JOINs - solution 1</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p># if you currently have ‘departments_dup’ set up:</p>
+
+<p><em>ALTER TABLE departments_dup</em>
+
+  </p>
+
+
+
+<p><em>DROP COLUMN dept_manager;</em>
+
+  </p>
+
+
+
+<p><em> </em>
+
+  </p>
+
+
+
+<p><em>ALTER TABLE departments_dup</em>
+
+  </p>
+
+
+
+<p><em>CHANGE COLUMN dept_no dept_no CHAR(4) NULL;</em>
+
+  </p>
+
+
+
+<p><em> </em>
+
+  </p>
+
+
+
+<p><em>ALTER TABLE departments_dup</em>
+
+  </p>
+
+
+
+<p><em>CHANGE COLUMN dept_name dept_name VARCHAR(40) NULL;</em>
+
+  </p>
+
+
+
+<p> 
+
+  </p>
+
+
+
+<p># if you don’t currently have ‘departments_dup’ set up
+
+  </p>
+
+
+
+<p><em>DROP TABLE IF EXISTS departments_dup;</em>
+
+  </p>
+
+
+
+<p><em>CREATE TABLE departments_dup </em>
+
+  </p>
+
+
+
+<p><em>(</em>
+
+  </p>
+
+
+
+<p><em>    dept_no CHAR(4) NULL,</em>
+
+  </p>
+
+
+
+<p><em>    dept_name VARCHAR(40) NULL</em>
+
+  </p>
+
+
+
+<p><em>);</em>
+
+  </p>
+
+
+
+<p><em> </em>
+
+  </p>
+
+
+
+<p><em>INSERT INTO departments_dup</em>
+
+  </p>
+
+
+
+<p><em>(</em>
+
+  </p>
+
+
+
+<p><em>    dept_no,</em>
+
+  </p>
+
+
+
+<p><em>    dept_name</em>
+
+  </p>
+
+
+
+<p><em>)SELECT </em>
+
+  </p>
+
+
+
+<p><em>                *</em>
+
+  </p>
+
+
+
+<p><em>FROM </em>
+
+  </p>
+
+
+
+<p><em>                departments;</em>
+
+  </p>
+
+
+
+<p><em> </em>
+
+  </p>
+
+
+
+<p><em>INSERT INTO departments_dup (dept_name) </em>
+
+  </p>
+
+
+
+<p><em>VALUES                ('Public Relations');</em>
+
+  </p>
+
+
+
+<p><em> </em>
+
+  </p>
+
+
+
+<p><em>DELETE FROM departments_dup </em>
+
+  </p>
+
+
+
+<p><em>WHERE</em>
+
+  </p>
+
+
+
+<p><em>    dept_no = 'd002';  </em>
+
+  </p>
+
+
+
+<p><em>    </em>
+
+  </p>
+
+
+
+<p><em>INSERT INTO departments_dup(dept_no) VALUES ('d010'), ('d011');</em>
+
+</p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

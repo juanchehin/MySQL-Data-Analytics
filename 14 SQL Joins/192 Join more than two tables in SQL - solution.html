@@ -1,0 +1,396 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>192 Join more than two tables in SQL - solution</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p><strong>SELECT<br></strong></p>
+
+<p><strong>    e.first_name,
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>    e.last_name,
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>    e.hire_date,
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>    t.title,
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>    m.from_date,
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>    d.dept_name
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>FROM
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>    employees e
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>        JOIN
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>    dept_manager m ON e.emp_no = m.emp_no
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>        JOIN
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>    departments d ON m.dept_no = d.dept_no
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>        JOIN
+
+  </strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>    titles t ON e.emp_no = t.emp_no</strong></p>
+
+
+
+
+
+
+
+<p><strong>WHERE t.title = 'Manager'</strong></p>
+
+
+
+
+
+
+
+<p><strong></strong><strong>ORDER BY e.emp_no;</strong></p>
+
+
+
+<p>-</p>
+
+
+
+
+
+
+
+<p>- 2nd Solution:</p>
+
+
+
+
+
+
+
+<p>-<br></p><p><strong>SELECT</strong><br></p>
+
+
+
+
+
+
+
+
+
+<p><strong>    e.first_name,</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>    e.last_name,</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>    e.hire_date,</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>    t.title,</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>    m.from_date,</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>    d.dept_name</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>FROM</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>    employees e</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>        JOIN</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>    dept_manager m ON e.emp_no = m.emp_no</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>        JOIN</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>    departments d ON m.dept_no = d.dept_no</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>        JOIN</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>    titles t ON e.emp_no = t.emp_no</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>            AND m.from_date = t.from_date</strong></p>
+
+
+
+
+
+
+
+
+
+<p><strong>ORDER BY e.emp_no;</strong></p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

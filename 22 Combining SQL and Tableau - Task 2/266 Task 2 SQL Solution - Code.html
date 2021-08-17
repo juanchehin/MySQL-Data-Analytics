@@ -1,0 +1,16 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>266 Task 2 SQL Solution - Code</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p><strong></strong></p><p><strong>SELECT <br>    d.dept_name,<br>    ee.gender,<br>    dm.emp_no,<br>    dm.from_date,<br>    dm.to_date,<br>    e.calendar_year,<br>    CASE<br>        WHEN YEAR(dm.to_date) &gt;= e.calendar_year AND YEAR(dm.from_date) &lt;= e.calendar_year THEN 1<br>        ELSE 0<br>    END AS active<br>FROM<br>    (SELECT <br>        YEAR(hire_date) AS calendar_year<br>    FROM<br>        t_employees<br>    GROUP BY calendar_year) e<br>        CROSS JOIN<br>    t_dept_manager dm<br>        JOIN<br>    t_departments d ON dm.dept_no = d.dept_no<br>         JOIN <br>     t_employees ee ON dm.emp_no = ee.emp_no<br>ORDER BY dm.emp_no, calendar_year;</strong></p><strong></strong><p><strong></strong></p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

@@ -1,0 +1,16 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>271 Task 3 SQL Solution - Code</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p><strong>SELECT <br>    e.gender,<br>    d.dept_name,<br>    ROUND(AVG(s.salary), 2) AS salary,<br>    YEAR(s.from_date) AS calendar_year<br>FROM<br>    t_salaries s<br>        JOIN<br>    t_employees e ON s.emp_no = e.emp_no<br>        JOIN<br>    t_dept_emp de ON de.emp_no = e.emp_no<br>        JOIN<br>    t_departments d ON d.dept_no = de.dept_no<br>GROUP BY d.dept_no , e.gender , calendar_year<br>HAVING calendar_year &lt;= 2002<br>ORDER BY d.dept_no;</strong></p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

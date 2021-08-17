@@ -1,0 +1,100 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>113 HAVING - exercise</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p>Select all employees whose average salary is higher than $120,000 per annum.</p>
+
+<p><em>Hint: You should obtain 101 records</em>.
+
+  </p>
+
+
+
+
+
+<p>Compare the output you obtained with the output of the following two queries: 
+
+  </p>
+
+
+
+
+
+<p><strong>SELECT 
+
+  </strong></p>
+
+<p><strong>    *, AVG(salary)
+
+  </strong></p>
+
+<p><strong>FROM
+
+  </strong></p>
+
+<p><strong>    salaries
+
+  </strong></p>
+
+<p><strong>WHERE
+
+  </strong></p>
+
+<p><strong>    salary &gt; 120000
+
+  </strong></p>
+
+<p><strong>GROUP BY emp_no
+
+  </strong></p>
+
+<p><strong>ORDER BY emp_no;
+
+  </strong></p>
+
+<p><strong> 
+
+  </strong></p>
+
+<p><strong>SELECT 
+
+  </strong></p>
+
+<p><strong>    *, AVG(salary)
+
+  </strong></p>
+
+<p><strong>FROM
+
+  </strong></p>
+
+<p><strong>    salaries
+
+  </strong></p>
+
+<p><strong>GROUP BY emp_no
+
+  </strong></p>
+
+<p><strong>HAVING AVG(salary) &gt; 120000;</strong>
+
+</p><p><br></p>
+
+
+
+
+
+<p> 
+
+</p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

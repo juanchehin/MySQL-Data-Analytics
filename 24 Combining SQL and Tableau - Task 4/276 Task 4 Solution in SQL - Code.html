@@ -1,0 +1,22 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>276 Task 4 Solution in SQL - Code</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p><strong>DROP PROCEDURE IF EXISTS filter_salary;</strong></p>
+
+<p><strong>DELIMITER $$<br>CREATE PROCEDURE filter_salary (IN p_min_salary FLOAT, IN p_max_salary FLOAT)<br>BEGIN<br>SELECT <br>    e.gender, d.dept_name, AVG(s.salary) as avg_salary<br>FROM<br>    t_salaries s<br>        JOIN<br>    t_employees e ON s.emp_no = e.emp_no<br>        JOIN<br>    t_dept_emp de ON de.emp_no = e.emp_no<br>        JOIN<br>    t_departments d ON d.dept_no = de.dept_no<br>    WHERE s.salary BETWEEN p_min_salary AND p_max_salary<br>GROUP BY d.dept_no, e.gender;<br>END$$</strong></p>
+
+<p><strong>DELIMITER ;</strong></p>
+
+<p><strong>CALL filter_salary(50000, 90000);</strong></p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

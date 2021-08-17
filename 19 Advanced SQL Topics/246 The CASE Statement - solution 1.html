@@ -1,0 +1,68 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>246 The CASE Statement - solution 1</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p><strong></strong><strong>SELECT</strong></p>
+
+<p><strong>    e.emp_no,</strong>
+
+  </p>
+
+<p><strong>    e.first_name,</strong>
+
+  </p>
+
+<p><strong>    e.last_name,</strong>
+
+  </p>
+
+<p><strong>    CASE</strong>
+
+  </p>
+
+<p><strong>        WHEN dm.emp_no IS NOT NULL THEN 'Manager'</strong>
+
+  </p>
+
+<p><strong>        ELSE 'Employee'</strong>
+
+  </p>
+
+<p><strong>    END AS is_manager</strong>
+
+  </p>
+
+<p><strong>FROM</strong>
+
+  </p>
+
+<p><strong>    employees e</strong>
+
+  </p>
+
+<p><strong>        LEFT JOIN</strong>
+
+  </p>
+
+<p><strong>    dept_manager dm ON dm.emp_no = e.emp_no</strong>
+
+  </p>
+
+<p><strong>WHERE</strong>
+
+  </p>
+
+<p><strong>    e.emp_no &gt; 109990;</strong>
+
+</p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

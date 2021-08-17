@@ -1,0 +1,134 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>230 User-defined functions in MySQL - solution</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p><strong>DELIMITER $$</strong></p>
+
+<p><strong>CREATE FUNCTION emp_info(p_first_name varchar(255), p_last_name varchar(255)) RETURNS decimal(10,2)
+
+  </strong></p>
+
+<p><strong>BEGIN
+
+  </strong></p>
+
+<p><strong>                DECLARE v_max_from_date date;
+
+  </strong></p>
+
+<p><strong>    DECLARE v_salary decimal(10,2);
+
+  </strong></p>
+
+
+
+<p><strong>                SELECT 
+
+  </strong></p>
+
+<p><strong>    MAX(from_date)
+
+  </strong></p>
+
+<p><strong>INTO v_max_from_date FROM
+
+  </strong></p>
+
+<p><strong>    employees e
+
+  </strong></p>
+
+<p><strong>        JOIN
+
+  </strong></p>
+
+<p><strong>    salaries s ON e.emp_no = s.emp_no
+
+  </strong></p>
+
+<p><strong>WHERE
+
+  </strong></p>
+
+<p><strong>    e.first_name = p_first_name
+
+  </strong></p>
+
+<p><strong>        AND e.last_name = p_last_name;
+
+  </strong></p>
+
+
+
+<p><strong>                SELECT 
+
+  </strong></p>
+
+<p><strong>    s.salary
+
+  </strong></p>
+
+<p><strong>INTO v_salary FROM
+
+  </strong></p>
+
+<p><strong>    employees e
+
+  </strong></p>
+
+<p><strong>        JOIN
+
+  </strong></p>
+
+<p><strong>    salaries s ON e.emp_no = s.emp_no
+
+  </strong></p>
+
+<p><strong>WHERE
+
+  </strong></p>
+
+<p><strong>    e.first_name = p_first_name
+
+  </strong></p>
+
+<p><strong>        AND e.last_name = p_last_name
+
+  </strong></p>
+
+<p><strong>        AND s.from_date = v_max_from_date;
+
+  </strong></p>
+
+<p><strong>            
+
+  </strong></p>
+
+<p><strong>                RETURN v_salary;
+
+  </strong></p>
+
+<p><strong>END$$
+
+  </strong></p>
+
+<p><strong>DELIMITER ;
+
+  </strong></p>
+
+
+
+<p><strong>SELECT EMP_INFO('Aruna', 'Journel');</strong>
+
+</p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

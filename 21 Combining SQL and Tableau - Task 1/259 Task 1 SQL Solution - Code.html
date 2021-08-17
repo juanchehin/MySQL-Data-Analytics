@@ -1,0 +1,28 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>259 Task 1 SQL Solution - Code</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p><strong>SELECT </strong></p>
+
+<p><strong>    YEAR(d.from_date) AS calendar_year,<br></strong><strong>    e.gender,
+    <br>    COUNT(e.emp_no) AS num_of_employees</strong></p>
+
+
+
+<p><strong>FROM     <br></strong><strong>     t_employees e         <br></strong><strong>          JOIN
+    <br>     t_dept_emp d ON d.emp_no = e.emp_no</strong></p>
+
+
+
+<p><strong>GROUP BY calendar_year , e.gender </strong></p><p><strong></strong><strong>HAVING calendar_year &gt;= 1990;</strong><strong><br></strong></p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>
